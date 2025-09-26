@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shop premium streetwear at Hammy - T-shirts, hoodies, jackets, caps, sneakers and accessories">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Premium Streetwear | Hammy</title>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="./index.html" class="logo" aria-label="Hammy - Go to homepage">Hammy</a>
+            <ul class="nav-links" id="navLinks" role="list">
+                <li role="listitem"><a href="./index.html">Home</a></li>
+                <li role="listitem"><a href="./shop.html" class="active" aria-current="page">Shop</a></li>
+                <li role="listitem"><a href="./about.html">About</a></li>
+                <li role="listitem"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="shop-container">
+        <!-- Filter and Sort Header -->
+
+        <main class="shop-layout" role="main">
+            <!-- LEFT SIDE (categories and filters) -->
+            <aside class="shop-sidebar" role="complementary" aria-label="Product categories and filters">
+                <div class="sidebar-header">
+                    <h2>Filters</h2>
+                    <button class="sidebar-close" aria-label="Close filters">×</button>
+                </div>
+
+                <section class="filter-section">
+                    <h3>CATEGORIES</h3>
+                    <ul class="category-list" role="list">
+                        <li role="listitem">
+                            <a href="#tshirts" data-category="tshirts" class="category-link">
+                                T-Shirts <span class="count">(12)</span>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="#hoodies" data-category="hoodies" class="category-link">
+                                Hoodies <span class="count">(8)</span>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="#jackets" data-category="jackets" class="category-link">
+                                Jackets <span class="count">(6)</span>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="#caps" data-category="caps" class="category-link">
+                                Caps <span class="count">(15)</span>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="#sneakers" data-category="sneakers" class="category-link">
+                                Sneakers <span class="count">(10)</span>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="#accessories" data-category="accessories" class="category-link">
+                                Accessories <span class="count">(20)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="filter-section">
+                    <h3>PRICE RANGE</h3>
+                    <div class="price-inputs">
+                        <div class="price-input-group">
+                            <label for="min-price">Min: £</label>
+                            <input type="number" id="min-price" min="0" max="500" value="0" placeholder="0">
+                        </div>
+                        <div class="price-input-group">
+                            <label for="max-price">Max: £</label>
+                            <input type="number" id="max-price" min="0" max="500" value="500" placeholder="500">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="filter-section">
+                    <h3>SIZE</h3>
+                    <div class="size-grid">
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="xs">
+                            <span class="size-label">XS</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="s">
+                            <span class="size-label">S</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="m">
+                            <span class="size-label">M</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="l">
+                            <span class="size-label">L</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="xl">
+                            <span class="size-label">XL</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="xxl">
+                            <span class="size-label">XXL</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="filter-section">
+                    <h3>COLOR</h3>
+                    <div class="color-grid">
+                        <button class="color-swatch" style="background-color: #000;" aria-label="Black"
+                            data-color="black"></button>
+                        <button class="color-swatch" style="background-color: #fff; border: 1px solid #ddd;"
+                            aria-label="White" data-color="white"></button>
+                        <button class="color-swatch" style="background-color: #666;" aria-label="Gray"
+                            data-color="gray"></button>
+                        <button class="color-swatch" style="background-color: #d32f2f;" aria-label="Red"
+                            data-color="red"></button>
+                        <button class="color-swatch" style="background-color: #1976d2;" aria-label="Blue"
+                            data-color="blue"></button>
+                        <button class="color-swatch" style="background-color: #388e3c;" aria-label="Green"
+                            data-color="green"></button>
+                    </div>
+                </section>
+
+                <button class="clear-filters-btn" type="button">Clear All Filters</button>
+            </aside>
+
+            <!-- RIGHT SIDE (products) -->
+            <section class="shop-products" role="main" aria-label="Product catalog">
+                <h1 class="page-title">Shop Our Collection</h1>
+
+                <div class="products-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card" data-category="tshirts" data-price="45">
+                        <div class="product-image">
+                            <span class="product-badge new">New</span>
+                            <div class="product-placeholder">BOX LOGO TEE</div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Classic Box Logo Tee</h3>
+                            <p class="product-description">Premium cotton streetwear essential</p>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="review-count">(24 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-symbol">£</span>
+                                <span class="price-value">45</span>
+                            </div>
+                            <div class="product-options">
+                                <label class="option-label">Size:</label>
+                                <select class="product-select">
+                                    <option value="">Select Size</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card" data-category="hoodies" data-price="120">
+                        <div class="product-image">
+                            <span class="product-badge bestseller">Bestseller</span>
+                            <div class="product-placeholder">HOODIE</div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Premium Hoodie</h3>
+                            <p class="product-description">Ultra-soft fleece with perfect fit</p>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="review-count">(89 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-symbol">£</span>
+                                <span class="price-value">120</span>
+                            </div>
+                            <div class="product-options">
+                                <label class="option-label">Size:</label>
+                                <select class="product-select">
+                                    <option value="">Select Size</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card" data-category="caps" data-price="35">
+                        <div class="product-image">
+                            <div class="product-placeholder">CAP</div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Snapback Cap</h3>
+                            <p class="product-description">Adjustable cap with embroidered logo</p>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="review-count">(15 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-symbol">£</span>
+                                <span class="price-value">35</span>
+                            </div>
+                            <div class="product-options">
+                                <label class="option-label">Color:</label>
+                                <select class="product-select">
+                                    <option value="">Select Color</option>
+                                    <option value="black">Black</option>
+                                    <option value="white">White</option>
+                                    <option value="navy">Navy</option>
+                                </select>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card" data-category="jackets" data-price="150">
+                        <div class="product-image">
+                            <span class="product-badge limited">Limited</span>
+                            <div class="product-placeholder">JACKET</div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Windbreaker Jacket</h3>
+                            <p class="product-description">Water-resistant with zip pockets</p>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="review-count">(42 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-symbol">£</span>
+                                <span class="price-value">150</span>
+                            </div>
+                            <div class="product-options">
+                                <label class="option-label">Size:</label>
+                                <select class="product-select">
+                                    <option value="">Select Size</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card" data-category="sneakers" data-price="200">
+                        <div class="product-image">
+                            <div class="product-placeholder">SNEAKERS</div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">High-Top Sneakers</h3>
+                            <p class="product-description">Premium leather with cushioned sole</p>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="review-count">(67 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-symbol">£</span>
+                                <span class="price-value">200</span>
+                            </div>
+                            <div class="product-options">
+                                <label class="option-label">Size:</label>
+                                <select class="product-select">
+                                    <option value="">Select Size</option>
+                                    <option value="7">UK 7</option>
+                                    <option value="8">UK 8</option>
+                                    <option value="9">UK 9</option>
+                                    <option value="10">UK 10</option>
+                                    <option value="11">UK 11</option>
+                                    <option value="12">UK 12</option>
+                                </select>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="./index.html">Home</a>
+                <a href="./shop.html">Shop</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+            <p>&copy; Shop Hammy.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
